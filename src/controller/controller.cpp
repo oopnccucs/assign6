@@ -15,10 +15,37 @@ Controller::Controller() {
     
 }
 
+RunningState Controller::run(InputState action) {
+
+    switch (state) {
+    case PROCESS_MOVEMENT: {
+        
+        // add your code to implement the enemy movement
+
+
+
+
+
+
+
+
+
+
+
+
+        break;
+    }
+
+    default:
+        break;
+    }
+
+    this->render();
+
+    return PLAY;
+}
+
 // Add your code to implement the Controller class here.
-
-
-
 
 
 
@@ -44,6 +71,15 @@ void Controller::render() {
                     player->render();
                     continue;
                 }
+                bool flag = false;
+                for(auto enemy : rooms[currentRoomIndex]->getEnemies()) {
+                    if(enemy->getPosition() == Position(x, y)) {
+                        enemy->render();
+                        flag = true;
+                        continue;
+                    }
+                }
+                if(flag) continue;
                 rooms[currentRoomIndex]->render(Position(x, y));
             }
             AnsiPrint("\n", nochange, nochange);

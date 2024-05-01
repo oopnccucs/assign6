@@ -5,6 +5,8 @@
 
 #include "roomstate.h"
 #include "../../controller/enviroment.h"
+#include "../enemy/slime/slime.h"
+#include "../enemy/dragon/dragon.h"
 
 using namespace RoomState;
 
@@ -16,6 +18,7 @@ const RoomData ROOM_DATA[] = {
         "Room 0",
         "This is the first room",
         Position(16, 10), 
+        std::vector<Enemy *>{},
         {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0},
@@ -44,6 +47,7 @@ const RoomData ROOM_DATA[] = {
         "Room 1",
         "Second room: survival field",
         Position(15, 10), 
+        std::vector<Enemy *> {new Slime(Position(6, 5)), new Slime(Position(28, 14))},
         {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -72,6 +76,8 @@ const RoomData ROOM_DATA[] = {
         "Room 2",
         "Third Room: boss",
         Position(4, 10), 
+
+        std::vector<Enemy *> {new Dragon(Position(24, 9), true)},
         {
             {0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5},
             {0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5},

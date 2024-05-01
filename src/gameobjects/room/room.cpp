@@ -4,7 +4,21 @@
 
 // read data to the Room class
 Room::Room(RoomData data) {
-    
+    this->roomID = data.id;
+    this->roomName = data.name;
+    this->roomDescription = data.description;
+
+    this->playerInitialPosition = data.playerInitialPosition;
+
+    for(auto enemy : data.enemies) {
+        this->enemies.push_back(enemy);
+    }
+
+    for (int y = 0; y < GAME_WINDOW_SIZE_Y; y++) {
+        for (int x = 0; x < GAME_WINDOW_SIZE_X; x++) {
+            this->defaultRoomObjectMap[y][x] = RoomObject(data.defaultRoomObjectMap[y][x]);
+        }
+    }
 }
 
 // add your code to implement the Room class here

@@ -31,6 +31,8 @@ public:
     RunningState run(InputState action);
 
     void render();
+
+    void roomChange(int roomIndex);
 };
 
 #endif

@@ -19,6 +19,7 @@ namespace RoomState
         std::string name;
         std::string description;
         Position playerInitialPosition;
+        std::vector<Enemy *> enemies;
         int defaultRoomObjectMap[GAME_WINDOW_SIZE_Y][GAME_WINDOW_SIZE_X];
     };
 } // namespace RoomState

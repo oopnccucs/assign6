@@ -27,6 +27,10 @@ public:
 
     int getMaxHealth();
 
+    int getAttack();
+
+    void hurt(int damage);
+
     std::string getName();
 };
 

@@ -5,8 +5,8 @@ namespace PlayerState
 {
     enum MoveState {
         MOVE,
-        // LEFTROOM,
-        // RIGHTROOM,
+        LEFTROOM,
+        RIGHTROOM,
     };
 } // namespace PlayerState
 

@@ -6,6 +6,7 @@
 
 #include "../../controller/enviroment.h"
 #include "../../functions/position/position.h"
+#include "../enemy/enemy.h"
 #include "roomstate.h"
 
 using namespace RoomState;
@@ -18,6 +19,8 @@ class Room {
 
         Position playerInitialPosition;
 
+        std::vector<Enemy *> enemies;
+
         RoomObject defaultRoomObjectMap[GAME_WINDOW_SIZE_Y][GAME_WINDOW_SIZE_X];
 
     public:
@@ -25,6 +28,10 @@ class Room {
         ~Room();
 
         bool walkable(Position position);
+
+        void destroyEnemy(Enemy *enemy);
+
+        const std::vector<Enemy *> & getEnemies();
 
         void render(Position position);
 };
