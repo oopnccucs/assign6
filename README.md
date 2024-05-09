@@ -49,10 +49,10 @@ Render function is already included in the assignment files, so there's no need 
 - Please update your completed version of assign5 based on the differences between the commit for `'assign 5 code'` (dbcf521f) and the commit for `'assign 6 code'` (931e42ef) in this git record.
   Specifically, please compare based on the differences highlighted in [this link](https://github.com/oopnccucs/assign6/commit/931e42efd53d95a5db1edb9f5411fad3b266d392) on GitHub, or utilize `$git checkout <commit-hash>` to switch between commits and compare.
 
-  - Implement `Enemy` class, `Slime` class, and `Dragon` class, managing their relationship with `GameObject` class using inheritance
-  - Implement handling of `Enemy` in `room`
-  - Implement logic for player movement and room transition in `controller`
-  - Add logic for active movement of monsters in `controller`
+- Implement `Enemy` class, `Slime` class, and `Dragon` class, managing their relationship with `GameObject` class using inheritance
+- Implement handling of `Enemy` in `room`
+- Implement logic for player movement and room transition in `controller`
+- Add logic for active movement of monsters in `controller`
 
 
 ## Sample Output
