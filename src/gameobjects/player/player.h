@@ -13,7 +13,8 @@ public:
     Player(Position initialPosition);
     ~Player();
 
-    MoveState move();
+    // move player to the position and return move result to determine the next state
+    MoveState move(Position pos);
     
     void render();
 };

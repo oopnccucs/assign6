@@ -32,6 +32,7 @@ public:
 
     void render();
 
+    // control about room change and current room
     void roomChange(int roomIndex);
 };
 

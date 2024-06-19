@@ -27,8 +27,10 @@ class Room {
         Room(RoomData roomData);
         ~Room();
 
+        // check if the position is walkable
         bool walkable(Position position);
 
+        // remove enemy from the enemies
         void destroyEnemy(Enemy *enemy);
 
         const std::vector<Enemy *> & getEnemies();
